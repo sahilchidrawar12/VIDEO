@@ -1,0 +1,675 @@
+html {
+    background: rgb(0, 0, 0);
+    color: white;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+    /* background: linear-gradient(48deg, rgba(9, 9, 9, 1) 59%, rgba(53, 36, 2, 1) 92%, rgba(224, 175, 82, 0.9529061624649859) 99%); */
+    background-size: cover;
+    width: 100%;
+    font-family: "Nunito", sans-serif;
+}
+
+/* navigation */
+
+/* header-navigation  */
+.head-nav {
+    background: transparent;
+    color: white;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+/*** INPUT ***/
+.head-nav input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+/*** LABEL ***/
+.head-nav label {
+    cursor: pointer;
+    /* display: block; */
+    /* font: 2em/1 "Oswald", sans-serif; */
+    padding: 0.5em;
+}
+
+/* Hamburger Icon */
+#menu-icon,
+#menu-icon:before,
+#menu-icon:after {
+    background: #1d1f20;
+    border-radius: 0.05em;
+    height: 0.2em;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+
+#menu-icon {
+    display: inline-block;
+    margin: 0.4em 0;
+    max-width: 1em;
+    position: relative;
+}
+
+.head-nav label #menu-icon {
+    float: right;
+}
+
+#menu-icon:before,
+#menu-icon:after {
+    content: "";
+    left: 0;
+    position: absolute;
+}
+
+#menu-icon:before {
+    top: -0.4em;
+}
+
+#menu-icon:after {
+    bottom: -0.4em;
+}
+
+/* Close Icon */
+.head-nav input[type="checkbox"]:checked + label #menu-icon {
+    background: transparent;
+}
+
+.head-nav input[type="checkbox"]:checked + label #menu-icon:before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.head-nav input[type="checkbox"]:checked + label #menu-icon:after {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+/*** MENU ***/
+/* Overlay */
+.head-nav input:checked ~ #overlay {
+    background: #e5e5e5;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    z-index: -1;
+}
+
+/* List */
+.head-nav ul {
+    font-size: 1.5em;
+    list-style: none;
+    margin: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+}
+
+.head-nav input:checked ~ ul {
+    margin: 1em;
+    max-height: inherit;
+    opacity: 1;
+}
+
+.head-nav ul > li {
+    margin: 0.5em 0;
+}
+
+.head-nav ul a {
+    color: #1d1f20 !important;
+    text-decoration: none;
+}
+
+.head-nav ul a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media */
+.head-nav ul#social-media > li {
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 0.5em;
+}
+@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro");
+
+.hero-content {
+    position: absolute;
+    top: 6%;
+    width: 81%;
+    left: 12%;
+}
+.hero-text {
+    font-family: "Anonymous Pro", monospace;
+    text-align: center;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(160, 169, 66) 4px 8px 6px;
+}
+
+/* banner  */
+.hero-section {
+    height: 100%;
+    width: 100%;
+}
+.hero-section img {
+    width: 100%;
+    z-index: -1;
+}
+
+/* course content  */
+.course-content {
+    width: 100%;
+    text-align: center;
+    margin-top: -9%;
+    padding-top: 0%;
+}
+.getstarted-button {
+    border-radius: 8px;
+    width: 60%;
+    box-sizing: border-box;
+    background: linear-gradient(-45deg, #f76b1c 0%, #fad961 100%);
+    transform: translate3d(0px, 20px, 0) scale(0.95);
+    transition: opacity 0.3s;
+}
+.course-text {
+    color: white;
+    font-size: 15px;
+}
+
+/* .course-content {
+    color: white;
+} */
+
+/* course start  */
+.courses {
+    color: white;
+    width: 100%;
+    margin: 0% 3%;
+    margin-bottom: 0%;
+}
+.course-row {
+    display: flex;
+    width: 100%;
+}
+.course-row-box {
+    width: 30%;
+    margin-right: 2%;
+    border-radius: 3px;
+}
+.course-row-box img {
+    width: 100%;
+    padding: 0%;
+    /* background: linear-gradient(
+        38deg,
+        rgba(251, 203, 44, 1) 6%,
+        rgba(212, 102, 48, 1) 31%,
+        rgba(235, 163, 45, 1) 54%,
+        rgba(211, 102, 48, 1) 72%,
+        rgba(247, 194, 44, 1) 100%
+    ); */
+    border-width: 10px 10px 0px 10px;
+    background: linear-gradient(
+        90deg,
+        #fbcb2c 6%,
+        #d46630 31%,
+        #eba32d 54%,
+        #d36630 72%,
+        #f7c22c 100%
+    );
+    border-radius: 8px;
+    padding: 2px;
+    padding-bottom: 0%;
+    box-sizing: border-box;
+}
+.course-row-box p {
+    margin-top: 0%;
+}
+/* footer navigation  */
+.navigation {
+    width: 100%;
+}
+
+.nav-link {
+    display: grid;
+    align-items: center;
+}
+.purple-nav {
+    background: rgb(251, 203, 44);
+    background: linear-gradient(
+        38deg,
+        rgba(251, 203, 44, 1) 6%,
+        rgba(212, 102, 48, 1) 31%,
+        rgba(235, 163, 45, 1) 54%,
+        rgba(211, 102, 48, 1) 72%,
+        rgba(247, 194, 44, 1) 100%
+    );
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-radius: 25px 25px 0px 0px;
+    display: flex;
+    justify-content: space-around;
+    padding: 2% 0% 0% 0%;
+}
+.purple-nav div {
+    flex: 1;
+    margin: 0% 0% 0% 0%;
+    text-align: center;
+}
+
+.purple-nav a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.purple-nav p {
+    font-size: 12px;
+    margin: 0%;
+}
+
+.purple-nav a:hover {
+    background: rgb(251, 203, 44);
+    background: linear-gradient(
+        38deg,
+        rgba(251, 203, 44, 1) 6%,
+        rgba(212, 102, 48, 1) 31%,
+        rgba(235, 163, 45, 1) 54%,
+        rgba(211, 102, 48, 1) 72%,
+        rgba(247, 194, 44, 1) 100%
+    );
+
+    /* Darker purple color from the image */
+    transform: translateY(3px);
+}
+
+.purple-nav a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    /* Darker purple color from the image */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.purple-nav a:hover::before {
+    transform: scaleX(1);
+}
+
+/* loading page start  */
+
+.loadingpage {
+    width: 100%;
+    height: 100vh;
+}
+
+.loadingpage-background {
+    width: 100%;
+}
+
+.loadingpage-background img {
+    width: 100%;
+}
+
+.loading-logo {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    align-items: center;
+    top: 1%;
+}
+
+.loading-logo img {
+    margin-top: 80%;
+    width: 80%;
+    margin-left: 10%;
+}
+/* loading page end  */
+/* login page start  */
+.loginoptions {
+    width: 100%;
+    margin-top: 80%;
+}
+
+.continue-button {
+    border-radius: 8px;
+    margin-left: 10%;
+    width: 80%;
+    box-sizing: border-box;
+    background: linear-gradient(-45deg, #f76b1c 0%, #fad961 100%);
+}
+
+.continue-button2 {
+    border-radius: 8px;
+    margin-left: 10%;
+    width: 35%;
+    box-sizing: border-box;
+    background: linear-gradient(-45deg, #f76b1c 0%, #fad961 100%);
+}
+
+.loginoption-api {
+    display: flex;
+    width: 100%;
+}
+
+.termsection {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.termsection a {
+    color: white;
+    font-weight: bold;
+}
+/* login-page ends  */
+/* competition page start  */
+.compition-details-head {
+    margin-left: 15%;
+    margin-top: 9%;
+}
+
+.compition-details {
+    display: grid;
+}
+
+.compition-detail-link {
+    width: 70%;
+    height: 20vh;
+    margin: 3% 15%;
+}
+
+.compition-details img {
+    height: 100%;
+    width: 100%;
+}
+/* competition page end  */
+/* profile page starts  */
+.profile-view {
+    height: 100vh;
+}
+
+.profile-view-head {
+    height: 25%;
+}
+
+.profile-view-head img {
+    height: 100%;
+    width: 100%;
+}
+
+.profile-view-img {
+    height: 56%;
+    width: 22%;
+    border-radius: 50%;
+    position: relative;
+    top: -10%;
+    margin-left: 5%;
+    display: flex;
+    background: rgb(251, 203, 44);
+    background: linear-gradient(
+        38deg,
+        rgba(251, 203, 44, 1) 6%,
+        rgba(212, 102, 48, 1) 31%,
+        rgba(235, 163, 45, 1) 54%,
+        rgba(211, 102, 48, 1) 72%,
+        rgba(247, 194, 44, 1) 100%
+    );
+}
+
+.profile-view-img img {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    margin: 5%;
+}
+
+.edit-profile {
+    margin-left: 15%;
+}
+
+.edit-button {
+    border-radius: 8px;
+    margin-top: 0%;
+    margin-left: 0%;
+    height: 35%;
+    width: 100%;
+    padding: 0%;
+    box-sizing: border-box;
+    background: linear-gradient(-45deg, #f76b1c 0%, #fad961 100%);
+}
+
+.edit-button h3 {
+    margin-top: 10%;
+}
+
+.logout-section {
+    width: 100%;
+    margin-top: 25%;
+}
+
+.logout-button {
+    border-radius: 8px;
+    margin-top: 0%;
+    margin-left: 0%;
+    height: 35%;
+    width: 100%;
+    padding: 0%;
+    box-sizing: border-box;
+    background: linear-gradient(-45deg, #f76b1c 0%, #fad961 100%);
+}
+/* profile page ends  */
+/* special course page starts  */
+.special-course-page {
+    margin-top: 15%;
+    width: 100%;
+}
+
+.special-course-page h2 {
+    margin-bottom: 0%;
+    margin-top: 6%;
+}
+
+.special-course-price {
+    display: flex;
+    padding: 2% 1%;
+    border-radius: 5px;
+    width: 90%;
+    margin: 1% 5%;
+    background-color: #2b2929;
+}
+
+.special-course-price img {
+    width: 25%;
+    border-width: 10px 10px 0px 10px;
+    background: linear-gradient(
+        90deg,
+        #fbcb2c 6%,
+        #d46630 31%,
+        #eba32d 54%,
+        #d36630 72%,
+        #f7c22c 100%
+    );
+    border-radius: 8px;
+    padding: 2px;
+    padding-bottom: 0%;
+    box-sizing: border-box;
+}
+
+.special-course-pr {
+    display: grid;
+    margin-left: 5%;
+    width: 75%;
+}
+
+.special-course-pr p {
+    margin: 0%;
+}
+
+.Coupon-section {
+    display: flex;
+    padding: 2% 1%;
+    border-radius: 5px;
+    width: 90%;
+    margin: 1% 5%;
+    background-color: #2b2929;
+}
+
+.Coupon-section inbox {
+    width: 60%;
+}
+
+.specialoffer {
+    display: flex;
+    margin: 0% 5%;
+}
+
+.specialoffer img {
+    width: 5%;
+    margin-right: 2%;
+}
+
+.Coupon-section input {
+    width: 70%;
+}
+
+.apply-button {
+    border-radius: 8px;
+    margin-left: 10%;
+    width: 40%;
+    box-sizing: border-box;
+    background: linear-gradient(-45deg, #f76b1c 0%, #fad961 100%);
+}
+/* special course page ends  */
+/* classes page start  */
+.classes-row {
+    margin-top: 8%;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.classes-row .course-row-box {
+    width: 100%;
+    display: flex;
+    margin-right: 2%;
+    border-radius: 3px;
+}
+.classes-row .course-row-box img {
+    width: 50%;
+}
+.classes-description {
+    width: 80%;
+    margin: 2% 10%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.classes-description div {
+    width: 25%;
+    margin: 1% 3%;
+    display: flex;
+    flex-direction: column;
+}
+.myClasses {
+    margin-top: 8%;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.myClasses-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.myClasses-box img {
+    width: 60%;
+    margin: 2%;
+}
+
+/* edit profile page -start  */
+
+.profilelogo-logo {
+    width: 100%;
+    text-align: left;
+}
+.profilelogo {
+    color: white;
+    font-size: 1cm;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid gold;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 0.2cm;
+    margin-left: 16cm;
+}
+
+.input {
+    color: white;
+}
+
+.input-field {
+    margin-top: 0.5cm;
+    text-align: justify;
+}
+.input-field input {
+    margin-top: 3%;
+    height: 0.8cm;
+    width: 100%;
+    border: 2px solid gold;
+    border-radius: 3px;
+}
+
+#save:hover {
+    color: darkgoldenrod;
+}
+
+@media (max-width: 1200px) {
+    .profilelogo {
+        margin-left: 12cm;
+    }
+}
+
+@media (max-width: 992px) {
+    .profilelogo {
+        margin-left: 8cm;
+    }
+}
+
+@media (max-width: 768px) {
+    .profilelogo {
+        margin-left: 4cm;
+    }
+}
+
+@media (max-width: 576px) {
+    .profilelogo {
+        margin-left: 2cm;
+        font-size: 0.8cm;
+    }
+}
+.container {
+    width: 80%;
+    margin: 10%;
+}
