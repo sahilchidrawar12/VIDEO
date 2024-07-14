@@ -62,8 +62,6 @@ Route::post('/subscribe', [SubscriptionController::class, 'subscribe'])->name('s
 Route::post('/verify-payment', [SubscriptionController::class, 'verifyPayment'])->name('verify-payment');
 
 
-Route::get('/', 'CoursesShowController@index')->name('courses.index');
-Route::get('/courses/{id}', 'CoursesShowController@show')->name('courses.show');
 
 
 
