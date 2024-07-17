@@ -68,7 +68,7 @@ Route::post('/verify-payment', [SubscriptionController::class, 'verifyPayment'])
 /* Admin routes */
 Route::get('admin', [AdminLoginController::class, 'login_from'])->name('admin.login_form');
 Route::post('admin/login', [AdminLoginController::class, 'login'])->name('admin.login_submit');
-Route::get('/admin/users', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('admin.users.index');
+Route::get('/admin/users', [App\Http\Controllers\admin\UserController::class, 'index'])->name('admin.users.index');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'admin', 'middleware' => 'admin.guest'], function () {
     Route::post('logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
